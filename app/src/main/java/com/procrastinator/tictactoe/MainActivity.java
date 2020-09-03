@@ -2,10 +2,13 @@ package com.procrastinator.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import static android.content.pm.ActivityInfo.*;
 
 public class MainActivity extends AppCompatActivity {
     boolean gameActive=true;
@@ -103,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation(SCREEN_ORIENTATION_NOSENSOR);
         setContentView(R.layout.activity_main);
+
     }
 }
